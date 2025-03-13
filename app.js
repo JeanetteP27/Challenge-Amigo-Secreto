@@ -19,7 +19,11 @@ function agregarAmigo() {
 };
 
 function sortearAmigo() {
-    const random = Math.floor(Math.random() * listaAmigos.length);
-    const amigoSecreto = listaAmigos[random];
-    ulResultado.innerHTML = `<li>El amigo secreto es: ${amigoSecreto}</li>`;
+    if(listaAmigos.length == 0){
+        alert("No hay amigos disponibles.");
+    }else{
+        const random = Math.floor(Math.random() * listaAmigos.length);
+        const amigoSecreto = listaAmigos[random];
+        ulResultado.innerHTML = `<li>El amigo secreto es: ${amigoSecreto}</li>`;
+    }
 };
